@@ -6,6 +6,7 @@ from frappe.model.document import Document
 
 class SSCCSettings(Document):
 
+    # this calculate check digit required in SSCC using modulo func
     def calculate_check_digit(self, sscc_base: str) -> int:
         """Calculate GS1 Mod 10 check digit."""
         total = 0
