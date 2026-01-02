@@ -90,36 +90,117 @@ Each record corresponds to one company and stores its **GS1 Company Prefix**, **
 
 ---
 
-## Usage Steps
+## 🛠️ Installation Guide
 
-### 1. Setup
+The **SSCC Generator** app can be installed on any existing **Frappe / ERPNext** site.
 
-- Go to **SSCC Settings** doctype in Frappe.
-    
-- Create a record for your company:
-    
-    - Enter _Company Name_ (company_name = "ABC")
-        
-    - Set _Application Identifier_ (default `00`)
-        
-    - Set _GS1 Company Prefix_ (7–10 digits)
-        
+---
 
-### 2. Generate New SSCC
+## ✅ Prerequisites
 
-From Frappe console, API, or server script:
+Before installing, ensure you have:
+
+* Frappe Framework **v14+ or v15+**
+* ERPNext (optional, but supported)
+* Bench installed and working
+* Access to the server terminal
+
+Check versions:
+
+```bash
+bench version
+```
+
+---
+
+## 📦 Step 1: Get the App
+
+From your bench directory, run:
+
+```bash
+bench get-app sscc_generator https://github.com/<your-username>/sscc_generator
+```
+
+Replace `<your-username>` with the actual GitHub username or organization.
+
+---
+
+## 🏗️ Step 2: Install the App on Your Site
+
+```bash
+bench --site your-site-name install-app sscc_generator
+```
+
+**Example:**
+
+```bash
+bench --site site1.local install-app sscc_generator
+```
+
+---
+
+## 🔄 Step 3: Apply Migrations
+
+```bash
+bench migrate
+```
+
+This will:
+
+* Create the **SSCC Settings** doctype
+* Register permissions
+* Sync app metadata
+
+---
+
+## 🔁 Step 4: Restart Bench
+
+```bash
+bench restart
+```
+
+*(Required for production or supervisor setups.)*
+
+---
+
+## ⚙️ Step 5: Configure SSCC Settings
+
+1. Login to ERPNext
+2. Go to **SSCC Settings**
+3. Create a new record for each company
+
+### Required Fields:
+
+* **Company Name**
+* **GS1 Company Prefix** (7–10 digits)
+* **Application Identifier** (default: `00`)
+
+Save the record.
+
+---
+
+## ▶️ Step 6: Generate Your First SSCC
+
+From **Bench Console**:
+
+```bash
+bench console
+```
 
 ```python
-doc = frappe.get_doc("SSCC Settings", company_name)
-new_sscc = doc.generate_next_sscc()
-print(new_sscc)
+doc = frappe.get_doc("SSCC Settings", "Makable")
+doc.generate_next_sscc()
 ```
 
-### 3. Expected Output
+**Output:**
 
 ```
-00000123450000000250
+00000123450000000478
 ```
+
+✔ 18-digit SSCC
+✔ GS1 compliant
+✔ Ready for barcode generation
 
 ---
 
@@ -130,7 +211,3 @@ print(new_sscc)
 - GS1: [Check Digit Calculator](https://www.gs1.org/services/check-digit-calculator)
     
 - GS1: [Company Prefix Registration](https://www.gs1.org/company-prefix)
-
-#### License
-
-mit
