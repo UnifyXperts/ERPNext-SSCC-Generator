@@ -57,39 +57,6 @@ sscc_generator/
 
 ---
 
-## Doctype: SSCC Settings
-
-### Purpose
-
-The `SSCC Settings` doctype is the main configuration and data storage for each company’s SSCC generation logic.
-
-Each record corresponds to one company and stores its **GS1 Company Prefix**, **Application Identifier**, and **last generated SSCC**.
-
-### Fields
-
-| Field                           | Type   | Description                                                                     |
-| ------------------------------- | ------ | ------------------------------------------------------------------------------- |
-| **Company Name**                | Data   | Name of the company this record represents.                                     |
-| **Application Identifier**      | Data   | Default is `"00"`. Identifies SSCC data type.                                   |
-| **GS1 Company Prefix**          | Data   | GS1-assigned prefix for this company (7–10 digits).                             |
-| **Last Generated SSCC**         | Data   | Stores the last generated SSCC (20 characters). Used for sequential generation. |
-| **Creation / Modified / Owner** | System | Standard Frappe metadata fields.                                                |
-
-### Example Record
-
-```json
-{
-  "name": "Company A",
-  "company_name": "Company A",
-  "application_identifier": "00",
-  "gs1_company_prefix": "0012345",
-  "last_generated_sscc": "00000123450000000249",
-  "doctype": "SSCC Settings"
-}
-```
-
----
-
 ## Installation Guide
 
 The **SSCC Generator** app can be installed on any existing **Frappe / ERPNext** site.
@@ -173,6 +140,19 @@ bench restart
 * **Application Identifier** (default: `00`)
 
 Save the record.
+
+### Example Record
+
+```json
+{
+  "name": "Company A",
+  "company_name": "Company A",
+  "application_identifier": "00",
+  "gs1_company_prefix": "0012345",
+  "last_generated_sscc": "00000123450000000249",
+  "doctype": "SSCC Settings"
+}
+```
 
 ---
 
