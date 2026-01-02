@@ -19,14 +19,14 @@ Each generated SSCC-18 code is stored in the system and incremented automaticall
 An **SSCC-18** is a **unique 18-digit number** that identifies a single logistic unit.  
 Its structure is defined by the **GS1 standard** and consists of the following parts:
 
-| Component                       | Description                                                                        | Example   | Length |     |
-| ------------------------------- | ---------------------------------------------------------------------------------- | --------- | ------ | --- |
-| **Application Identifier (AI)** | Identifies that this data element is an SSCC. Always `"00"`.                       | 00        | 2      |     |
-| **Extension Digit**             | Used to extend serial capacity. Assigned by the company generating the SSCC (0–9). | 0         | 1      |     |
-| **GS1 Company Prefix**          | Unique number assigned by GS1 to the company.                                      | 0012345   | 7      |     |
-| **Serial Reference**            | Unique number within the company prefix to identify a logistic unit.               | 000000024 | 9      |     |
-| **Check Digit**                 | Calculated using the Modulo 10 algorithm.                                          | 9         | 1      |     |
-| **Total Digits (excluding AI)** | —                                                                                  | —         | 18     |     |
+| Component                       | Description                                                                        | Example   | Length |
+| ------------------------------- | ---------------------------------------------------------------------------------- | --------- | ------ |
+| **Application Identifier (AI)** | Identifies that this data element is an SSCC. Always `"00"`.                       | 00        | 2      |
+| **Extension Digit**             | Used to extend serial capacity. Assigned by the company generating the SSCC (0–9). | 0         | 1      |
+| **GS1 Company Prefix**          | Unique number assigned by GS1 to the company.                                      | 0012345   | 7      |
+| **Serial Reference**            | Unique number within the company prefix to identify a logistic unit.               | 000000024 | 9      |
+| **Check Digit**                 | Calculated using the Modulo 10 algorithm.                                          | 9         | 1      |
+| **Total Digits (excluding AI)** | —                                                                                  | —         | 18     |
 
 ![[Pasted image 20251030094636.png]]
 
