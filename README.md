@@ -90,13 +90,13 @@ Each record corresponds to one company and stores its **GS1 Company Prefix**, **
 
 ---
 
-## 🛠️ Installation Guide
+## Installation Guide
 
 The **SSCC Generator** app can be installed on any existing **Frappe / ERPNext** site.
 
 ---
 
-## ✅ Prerequisites
+### Prerequisites
 
 Before installing, ensure you have:
 
@@ -113,7 +113,7 @@ bench version
 
 ---
 
-## 📦 Step 1: Get the App
+### Step 1: Get the App
 
 From your bench directory, run:
 
@@ -125,7 +125,7 @@ Replace `<your-username>` with the actual GitHub username or organization.
 
 ---
 
-## 🏗️ Step 2: Install the App on Your Site
+### Step 2: Install the App on Your Site
 
 ```bash
 bench --site your-site-name install-app sscc_generator
@@ -139,7 +139,7 @@ bench --site site1.local install-app sscc_generator
 
 ---
 
-## 🔄 Step 3: Apply Migrations
+### Step 3: Apply Migrations
 
 ```bash
 bench migrate
@@ -153,7 +153,7 @@ This will:
 
 ---
 
-## 🔁 Step 4: Restart Bench
+### Step 4: Restart Bench
 
 ```bash
 bench restart
@@ -163,7 +163,7 @@ bench restart
 
 ---
 
-## ⚙️ Step 5: Configure SSCC Settings
+### Step 5: Configure SSCC Settings
 
 1. Login to ERPNext
 2. Go to **SSCC Settings**
@@ -179,7 +179,7 @@ Save the record.
 
 ---
 
-## ▶️ Step 6: Generate Your First SSCC
+### Step 6: Generate Your First SSCC
 
 From **Bench Console**:
 
