@@ -1,3 +1,5 @@
+<p align="center"> <a href="https://www.unifyxperts.com"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://www.unifyxperts.com/api/media/file/unifyxperts-logo-dark-mode.png"> <img src="https://unifyxperts.com/api/media/file/unifyxperts-logo.png" alt="UnifyXperts" width="300"> </picture> </a> </p>
+
 ## ERPNext SSCC Generator
 
 The SSCC Generator app provides a reliable and GS1-compliant way to generate Serial Shipping Container Codes (SSCC) directly within the Frappe Framework or ERPNext.
